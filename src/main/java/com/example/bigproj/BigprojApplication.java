@@ -23,6 +23,7 @@ public class BigprojApplication {
 		d.insertAll();
 
 		System.out.println(adao.count());
+		System.out.println(adao.getTotalBalanceByCustomerName("Jane").orElse(0L));
 
 	}
 }

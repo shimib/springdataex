@@ -23,7 +23,7 @@ public class BigFlow {
 	
 	public void insertAll() {
 		Customer john = new Customer("John");
-		Customer jane = new Customer("John");
+		Customer jane = new Customer("Jane");
 		
 		
 		cdao.save(Arrays.asList(john, jane));
