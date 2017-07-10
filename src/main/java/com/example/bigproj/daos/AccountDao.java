@@ -19,5 +19,7 @@ public interface AccountDao extends JpaRepository<Account, Long> {
 	@Override
 	@PostFilter("hasAuthority('ADMIN') or (filterObject.owner.name == authentication.name)")
 	List<Account> findAll();
+	
+	List<Account> findAllByOwnerName(String name);
 
 }

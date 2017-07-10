@@ -39,8 +39,11 @@ public class BigFlow {
 		adao.save(Arrays.asList(a1,a2,a3,a4));
 		
 		rdao.save(new UserRole("John", "REGULAR"));
+		rdao.save(new UserRole("John", "ROLE_ACTUATOR"));
 		rdao.save(new UserRole("Jane", "REGULAR"));
+		rdao.save(new UserRole("Jane", "ROLE_ACTUATOR"));
 		rdao.save(new UserRole("Bob", "ADMIN"));
+		rdao.save(new UserRole("Bob", "ROLE_ACTUATOR"));
 		
 	}
 	
