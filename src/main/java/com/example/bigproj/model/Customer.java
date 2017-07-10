@@ -8,12 +8,31 @@ import javax.persistence.Id;
 public class Customer {
 	private Long id;
 	private String name;
+	private String password;
+	private boolean enabled = true;
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public Customer() {
 	}
 
-	public Customer(String name) {
+	public Customer(String name, String pass) {
 		this.name = name;
+		this.password = pass;
 	}
 
 	@GeneratedValue
