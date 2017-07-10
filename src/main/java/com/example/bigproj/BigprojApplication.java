@@ -10,6 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import com.example.bigproj.daos.AccountDao;
 import com.example.bigproj.daos.BigFlow;
 import com.example.bigproj.daos.CustomerDao;
+import com.example.bigproj.daos.GeneralDAO;
 import com.example.bigproj.model.Account;
 import com.example.bigproj.model.Customer;
 
@@ -24,6 +25,6 @@ public class BigprojApplication {
 
 		System.out.println(adao.count());
 		System.out.println(adao.getTotalBalanceByCustomerName("Jane").orElse(0.0));
-
+		System.out.println(bf.getBean(GeneralDAO.class).getAllDBNames());
 	}
 }
